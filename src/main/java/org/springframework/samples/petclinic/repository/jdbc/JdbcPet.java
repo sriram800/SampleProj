@@ -34,7 +34,6 @@ class JdbcPet extends Pet {
     
     
     
-    private String name;
     
     public String getName() {
 		return name;
