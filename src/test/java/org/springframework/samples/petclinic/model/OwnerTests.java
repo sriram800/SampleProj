@@ -33,12 +33,26 @@ public class OwnerTests {
     public void testHasPet() {
         Owner owner = new Owner();
         Pet fido = new Pet();
-        fido.setName("Fido1");
+        fido.setName("Fido");
         assertNull(owner.getPet("Fido"));
         assertNull(owner.getPet("fido"));
         owner.addPet(fido);
         assertEquals(fido, owner.getPet("Fido"));
         assertEquals(fido, owner.getPet("fido"));
+    }
+    
+    
+    @Test
+    @Transactional
+    public void testHasPet1() {
+        Owner owner = new Owner();
+        Pet fido = new Pet();
+        fido.setName("Fido1");
+        assertNull(owner.getPet("Fido1"));
+        assertNull(owner.getPet("fido1"));
+        owner.addPet(fido);
+        assertEquals(fido, owner.getPet("Fido1"));
+        assertEquals(fido, owner.getPet("fido1"));
     }
 
 }
