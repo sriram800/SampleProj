@@ -33,7 +33,7 @@ public class OwnerTests {
     public void testHasPet() {
         Owner owner = new Owner();
         Pet fido = new Pet();
-        fido.setName("Fido");
+        fido.setName("Fido1");
         assertNull(owner.getPet("Fido"));
         assertNull(owner.getPet("fido"));
         owner.addPet(fido);
