@@ -16,7 +16,6 @@
 package org.springframework.samples.petclinic.repository.jdbc;
 
 import org.springframework.samples.petclinic.model.Pet;
-import java.util.Collection;
 
 /**
  * Subclass of Pet that carries temporary id properties which are only relevant for a JDBC implementation of the
@@ -31,9 +30,7 @@ class JdbcPet extends Pet {
 
     private int ownerId;
     
-    
-    
-    
+    private String name;
     
     public String getName() {
 		return name;
