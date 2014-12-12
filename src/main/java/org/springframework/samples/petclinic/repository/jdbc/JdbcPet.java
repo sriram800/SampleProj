@@ -18,12 +18,6 @@ package org.springframework.samples.petclinic.repository.jdbc;
 import org.springframework.samples.petclinic.model.Pet;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.samples.petclinic.model.Vets;
-import org.springframework.samples.petclinic.service.ClinicService;
-import org.springframework.stereotype.Controller;
-
-
 /**
  * Subclass of Pet that carries temporary id properties which are only relevant for a JDBC implementation of the
  * ClinicService.
