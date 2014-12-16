@@ -42,6 +42,8 @@ class JdbcPet extends Pet {
 
     private int ownerId;
     
+    private String name;
+    
     public String getName() {
 		return name;
 	}
