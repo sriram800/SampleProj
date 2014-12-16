@@ -18,7 +18,6 @@ package org.springframework.samples.petclinic.repository.jdbc;
 import org.springframework.samples.petclinic.model.Pet;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.service.ClinicService;
 
 
