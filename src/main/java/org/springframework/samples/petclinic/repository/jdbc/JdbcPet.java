@@ -25,8 +25,6 @@ import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Owner;
-import org.springframework.samples.petclinic.model.PetType;
-import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.stereotype.Controller;
 
 
@@ -43,8 +41,6 @@ class JdbcPet extends Pet {
     private int typeId;
 
     private int ownerId;
-    
-    private String name;
     
     public String getName() {
 		return name;
