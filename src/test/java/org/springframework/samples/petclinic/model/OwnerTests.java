@@ -54,5 +54,45 @@ public class OwnerTests {
         assertEquals(fido, owner.getPet("Fido1"));
         assertEquals(fido, owner.getPet("fido1"));
     }
+    
+    
+    @Test
+    @Transactional
+    public void testHasPet2() {
+        Owner owner = new Owner();
+        Pet fido = new Pet();
+        fido.setName("Fido1");
+        assertNull(owner.getPet("Fido1"));
+        assertNull(owner.getPet("fido1"));
+        owner.addPet(fido);
+        assertEquals(fido, owner.getPet("Fido1"));
+        assertEquals(fido, owner.getPet("fido1"));
+    }
+    
+    @Test
+    @Transactional
+    public void testHasPet3() {
+        Owner owner = new Owner();
+        Pet fido = new Pet();
+        fido.setName("Fido1");
+        assertNull(owner.getPet("Fido1"));
+        assertNull(owner.getPet("fido1"));
+        owner.addPet(fido);
+        assertEquals(fido, owner.getPet("Fido1"));
+        assertEquals(fido, owner.getPet("fido1"));
+    }
+    
+    @Test
+    @Transactional
+    public void testHasPet4() {
+        Owner owner = new Owner();
+        Pet fido = new Pet();
+        fido.setName("Fido1");
+        assertNull(owner.getPet("Fido1"));
+        assertNull(owner.getPet("fido1"));
+        owner.addPet(fido);
+        assertEquals(fido, owner.getPet("Fido1"));
+        assertEquals(fido, owner.getPet("fido1"));
+    }
 
 }
