@@ -22,8 +22,6 @@ import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
 import org.springframework.samples.petclinic.service.ClinicService;
-import org.springframework.stereotype.Controller;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 
