@@ -7,6 +7,30 @@
 
 	<name>petclinic</name>
 	<packaging>war</packaging>
+	
+	<developers>
+        <developer>
+            <id>sriramulu.parisa</id>
+            <name>Srirmaulu Parisa</name>
+            <email>sriramulu.parisa@kony.com</email>
+            <organization>Kony</organization>
+            <roles>
+                <role>Application Developer</role>
+            </roles>
+            <timezone>5.5</timezone>
+        </developer>
+        <developer>
+            <id>govind.vanga</id>
+            <name>govind vanga</name>
+            <email>govind.vanga@kony.com</email>
+            <organization>Kony</organization>
+            <roles>
+                <role>Application Developer</role>
+            </roles>
+            <timezone>5.5</timezone>
+        </developer> 
+        
+    </developers>
 
 	<properties>
 
