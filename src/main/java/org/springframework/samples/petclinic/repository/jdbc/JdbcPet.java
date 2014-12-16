@@ -17,6 +17,14 @@ package org.springframework.samples.petclinic.repository.jdbc;
 
 import org.springframework.samples.petclinic.model.Pet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.model.Owner;
+import org.springframework.samples.petclinic.model.Pet;
+import org.springframework.samples.petclinic.model.PetType;
+import org.springframework.samples.petclinic.service.ClinicService;
+
+
+
 /**
  * Subclass of Pet that carries temporary id properties which are only relevant for a JDBC implementation of the
  * ClinicService.
@@ -31,49 +39,29 @@ class JdbcPet extends Pet {
     private int ownerId;
     
     private String name;
-
-	/**
-	 * @return the typeId
-	 */
-	public int getTypeId() {
-		return typeId;
-	}
-
-	/**
-	 * @param typeId the typeId to set
-	 */
-	public void setTypeId(int typeId) {
-		this.typeId = typeId;
-	}
-
-	/**
-	 * @return the ownerId
-	 */
-	public int getOwnerId() {
-		return ownerId;
-	}
-
-	/**
-	 * @param ownerId the ownerId to set
-	 */
-	public void setOwnerId(int ownerId) {
-		this.ownerId = ownerId;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
+    
+    public String getName() {
 		return name;
 	}
 
-	/**
-	 * @param name the name to set
-	 */
 	public void setName(String name) {
 		this.name = name;
 	}
-    
-  
+
+	public void setTypeId(int typeId) {
+        this.typeId = typeId;
+    }
+
+    public int getTypeId() {
+        return this.typeId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public int getOwnerId() {
+        return this.ownerId;
+    }
 
 }
