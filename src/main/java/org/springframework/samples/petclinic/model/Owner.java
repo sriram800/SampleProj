@@ -61,35 +61,52 @@ public class Owner extends Person {
     private Set<Pet> pets;
 
 
-    public String getAddress() {
-        return this.address;
-    }
+    /**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public String getCity() {
-        return this.city;
-    }
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
 
-    public String getTelephone() {
-        return this.telephone;
-    }
+	/**
+	 * @return the telephone
+	 */
+	public String getTelephone() {
+		return telephone;
+	}
 
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
+	/**
+	 * @param telephone the telephone to set
+	 */
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
 
-    protected void setPetsInternal(Set<Pet> pets) {
-        this.pets = pets;
-    }
-
-    protected Set<Pet> getPetsInternal() {
+	/**
+	 * @return
+	 */
+	protected Set<Pet> getPetsInternal() {
         if (this.pets == null) {
             this.pets = new HashSet<Pet>();
         }
