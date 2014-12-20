@@ -41,7 +41,6 @@ public class VetsAtomView extends AbstractAtomFeedView {
     protected void buildFeedMetadata(Map<String, Object> model, Feed feed, HttpServletRequest request) {
         feed.setId("tag:springsource.org");
         feed.setTitle("Veterinarians");
-        //feed.setUpdated(date);
     }
 
     @Override
@@ -54,10 +53,8 @@ public class VetsAtomView extends AbstractAtomFeedView {
 
         for (Vet vet : vetList) {
             Entry entry = new Entry();
-            // see http://diveintomark.org/archives/2004/05/28/howto-atom-id#other
             entry.setId(String.format("tag:springsource.org,%s", vet.getId()));
             entry.setTitle(String.format("Vet: %s %s", vet.getFirstName(), vet.getLastName()));
-            //entry.setUpdated(visit.getDate().toDate());
 
             Content summary = new Content();
             summary.setValue(vet.getSpecialties().toString());
