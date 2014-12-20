@@ -45,14 +45,23 @@ import org.springframework.core.style.ToStringCreator;
 @Table(name = "owners")
 public class Owner extends Person {
 	
+    /**
+     * address
+     */
     @Column(name = "address")
     @NotEmpty
     private String address;
 
+    /**
+     * city
+     */
     @Column(name = "city")
     @NotEmpty
     private String city;
 
+    /**
+     * telephone
+     */
     @Column(name = "telephone")
     @NotEmpty
     @Digits(fraction = 0, integer = 10)
@@ -114,12 +123,18 @@ public class Owner extends Person {
         return this.pets;
     }
 
+    /**
+     * @return Pets
+     */
     public List<Pet> getPets() {
         List<Pet> sortedPets = new ArrayList<Pet>(getPetsInternal());
         PropertyComparator.sort(sortedPets, new MutableSortDefinition("name", true, true));
         return Collections.unmodifiableList(sortedPets);
     }
 
+    /**
+     * @param pet
+     */
     public void addPet(Pet pet) {
         getPetsInternal().add(pet);
         pet.setOwner(this);
@@ -155,6 +170,9 @@ public class Owner extends Person {
         return null;
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     @Override
     public String toString() {
         return new ToStringCreator(this)
