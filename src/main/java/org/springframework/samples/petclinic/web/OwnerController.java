@@ -49,12 +49,12 @@ public class OwnerController {
 
 
     @Autowired
-    public OwnerController(ClinicService clinicService) {
+    public OwnerController(final ClinicService clinicService) {
         this.clinicService = clinicService;
     }
 
     @InitBinder
-    public void setAllowedFields(WebDataBinder dataBinder) {
+    public void setAllowedFields(final WebDataBinder dataBinder) {
         dataBinder.setDisallowedFields("id");
     }
 
