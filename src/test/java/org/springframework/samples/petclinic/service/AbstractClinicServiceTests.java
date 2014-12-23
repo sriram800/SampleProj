@@ -189,6 +189,17 @@ public abstract class AbstractClinicServiceTests {
 	    assertEquals(found + 1, pet7.getVisits().size());
 	    assertNotNull("Visit Id should have been generated", visit.getId());
 	}
+	
+	@Test
+	public void getAllPetTypes() {
+	    Collection<PetType> petTypes = this.clinicService.findPetTypes();
+	
+	    PetType petType1 = EntityUtils.getById(petTypes, PetType.class, 1);
+	    assertEquals("cat", petType1.getName());
+	    PetType petType4 = EntityUtils.getById(petTypes, PetType.class, 4);
+	    assertEquals("snake", petType4.getName());
+	}
+
 
 
 }
