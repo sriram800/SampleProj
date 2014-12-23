@@ -48,16 +48,26 @@ public class OwnerController {
     private final ClinicService clinicService;
 
 
+    /**
+     * @param clinicService
+     */
     @Autowired
     public OwnerController(final ClinicService clinicService) {
         this.clinicService = clinicService;
     }
 
+    /**
+     * @param dataBinder
+     */
     @InitBinder
     public void setAllowedFields(final WebDataBinder dataBinder) {
         dataBinder.setDisallowedFields("id");
     }
 
+    /**
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/owners/new", method = RequestMethod.GET)
     public String initCreationForm(Map<String, Object> model) {
         Owner owner = new Owner();
@@ -65,6 +75,12 @@ public class OwnerController {
         return "owners/createOrUpdateOwnerForm";
     }
 
+    /**
+     * @param owner
+     * @param result
+     * @param status
+     * @return
+     */
     @RequestMapping(value = "/owners/new", method = RequestMethod.POST)
     public String processCreationForm(@Valid Owner owner, BindingResult result, SessionStatus status) {
         if (result.hasErrors()) {
@@ -76,12 +92,22 @@ public class OwnerController {
         }
     }
 
+    /**
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/owners/find", method = RequestMethod.GET)
     public String initFindForm(Map<String, Object> model) {
         model.put("owner", new Owner());
         return "owners/findOwners";
     }
 
+    /**
+     * @param owner
+     * @param result
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/owners", method = RequestMethod.GET)
     public String processFindForm(Owner owner, BindingResult result, Map<String, Object> model) {
 
@@ -103,6 +129,11 @@ public class OwnerController {
         }
     }
 
+    /**
+     * @param ownerId
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/owners/{ownerId}/edit", method = RequestMethod.GET)
     public String initUpdateOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
         Owner owner = this.clinicService.findOwnerById(ownerId);
@@ -110,6 +141,12 @@ public class OwnerController {
         return "owners/createOrUpdateOwnerForm";
     }
 
+    /**
+     * @param owner
+     * @param result
+     * @param status
+     * @return
+     */
     @RequestMapping(value = "/owners/{ownerId}/edit", method = RequestMethod.PUT)
     public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, SessionStatus status) {
         if (result.hasErrors()) {
