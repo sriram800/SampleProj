@@ -199,6 +199,16 @@ public abstract class AbstractClinicServiceTests {
 	    PetType petType4 = EntityUtils.getById(petTypes, PetType.class, 4);
 	    assertEquals("snake", petType4.getName());
 	}
+	
+	@Test
+	public void getAllPetTypes1() {
+	    Collection<PetType> petTypes = this.clinicService.findPetTypes();
+	
+	    PetType petType1 = EntityUtils.getById(petTypes, PetType.class, 1);
+	    assertEquals("cat", petType1.getName());
+	    PetType petType4 = EntityUtils.getById(petTypes, PetType.class, 4);
+	    assertEquals("snake", petType4.getName());
+	}
 
 
 
