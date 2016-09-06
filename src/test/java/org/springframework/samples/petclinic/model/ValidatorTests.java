@@ -116,4 +116,38 @@ public class ValidatorTests {
         Assert.assertEquals(violation.getMessage(), "may not be empty");
     }
 	
+	@Test
+    public void emptyFirstName5() {
+
+	LocaleContextHolder.setLocale(Locale.ENGLISH);
+        Person person = new Person();
+        person.setFirstName("");
+        person.setLastName("smith");
+
+        Validator validator = createValidator();
+        Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
+
+        Assert.assertEquals(1, constraintViolations.size());
+        ConstraintViolation<Person> violation =  constraintViolations.iterator().next();
+        Assert.assertEquals(violation.getPropertyPath().toString(), "firstName");
+        Assert.assertEquals(violation.getMessage(), "may not be empty");
+    }
+	
+	@Test
+    public void emptyFirstName6() {
+
+	LocaleContextHolder.setLocale(Locale.ENGLISH);
+        Person person = new Person();
+        person.setFirstName("");
+        person.setLastName("smith");
+
+        Validator validator = createValidator();
+        Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
+
+        Assert.assertEquals(1, constraintViolations.size());
+        ConstraintViolation<Person> violation =  constraintViolations.iterator().next();
+        Assert.assertEquals(violation.getPropertyPath().toString(), "firstName");
+        Assert.assertEquals(violation.getMessage(), "may not be empty");
+    }
+	
 }

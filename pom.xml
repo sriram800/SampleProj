@@ -20,9 +20,9 @@
             <timezone>5.5</timezone>
         </developer>
         <developer>
-            <id>govind.vanga</id>
-            <name>govind vanga</name>
-            <email>govind.vanga@kony.com</email>
+            <id>sriram80</id>
+            <name>Test User</name>
+            <email>test.user@kony.com</email>
             <organization>Kony</organization>
             <roles>
                 <role>Application Developer</role>
