@@ -40,7 +40,7 @@ public class BaseEntity {
     }
 
     public Integer getId() {
-        return id;
+        return id 
     }
 
     public boolean isNew() {
